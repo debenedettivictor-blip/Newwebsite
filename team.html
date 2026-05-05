@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investment Team — Oak Hill Advisors</title>
+  <meta name="description" content="Meet the senior partners and investment professionals at Oak Hill Advisors — leaders in global credit investing across private credit, high yield, distressed debt and CLOs." />
+  <meta name="theme-color" content="#0c2340" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c2340'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia' font-size='14' fill='%23ffffff'%3EO%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none">
+            <rect width="42" height="42" fill="currentColor"/>
+            <text x="21" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#ffffff" font-weight="500">O</text>
+          </svg>
+        </span>
+        <span class="brand-text">Oak Hill Advisors<small>A T. Rowe Price Company</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Firm</a></li>
+        <li><a href="strategies.html">Strategies</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Investor Login
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs reveal"><a href="index.html">Home</a> &nbsp;/&nbsp; Investment Team</div>
+    <span class="eyebrow reveal">Investment team</span>
+    <h1 class="reveal" style="--reveal-delay: 0.1s; margin-top: 1.5rem;">The people behind the portfolios.</h1>
+    <p class="lead reveal" style="--reveal-delay: 0.2s">
+      Meet the senior partners and investment professionals at Oak Hill Advisors — a deeply tenured team that has invested together across multiple credit cycles.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <!-- Lookup tools -->
+    <div class="team-tools reveal">
+      <div class="team-search">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="9" cy="9" r="6"/>
+          <path d="M14 14l4 4" stroke-linecap="round"/>
+        </svg>
+        <input type="search" id="teamSearch" placeholder="Search by name, title, office or focus area…" aria-label="Search investment team"/>
+        <button class="team-search-clear" id="teamSearchClear" aria-label="Clear search">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l8 8M11 3l-8 8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="team-count" id="teamCount">
+        Showing <strong>—</strong> of <strong>—</strong> professionals
+      </div>
+    </div>
+
+    <div class="team-filters reveal" style="--reveal-delay: 0.05s">
+      <div class="team-filter-row">
+        <span class="label">Office</span>
+        <button class="team-chip active" data-filter="office" data-value="all">All</button>
+        <button class="team-chip" data-filter="office" data-value="New York">New York</button>
+        <button class="team-chip" data-filter="office" data-value="London">London</button>
+        <button class="team-chip" data-filter="office" data-value="Fort Worth">Fort Worth</button>
+        <button class="team-chip" data-filter="office" data-value="Hong Kong">Hong Kong</button>
+        <button class="team-chip" data-filter="office" data-value="Sydney">Sydney</button>
+        <button class="team-chip" data-filter="office" data-value="Luxembourg">Luxembourg</button>
+      </div>
+      <div class="team-filter-row">
+        <span class="label">Focus</span>
+        <button class="team-chip active" data-filter="focus" data-value="all">All</button>
+        <button class="team-chip" data-filter="focus" data-value="Leadership">Firm leadership</button>
+        <button class="team-chip" data-filter="focus" data-value="Private Credit">Private credit</button>
+        <button class="team-chip" data-filter="focus" data-value="High Yield">High yield &amp; loans</button>
+        <button class="team-chip" data-filter="focus" data-value="Distressed">Distressed</button>
+        <button class="team-chip" data-filter="focus" data-value="CLO">CLOs / structured</button>
+        <button class="team-chip" data-filter="focus" data-value="European Credit">European credit</button>
+      </div>
+    </div>
+
+    <!-- Team grid (rendered by JS from data/team.js) -->
+    <div class="team-grid" id="teamGrid" role="list" aria-label="Investment team"></div>
+
+    <!-- Empty state -->
+    <div class="team-empty" id="teamEmpty" role="status">
+      <h3>No matching professionals</h3>
+      <p>Try a different search term, or clear your filters.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bio modal -->
+<div class="bio-modal" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="bioModalName" aria-hidden="true">
+  <div class="bio-modal-panel">
+    <button class="bio-modal-close" id="bioModalClose" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/></svg>
+    </button>
+    <div class="bio-modal-grid">
+      <div class="bio-modal-photo" id="bioModalPhoto">
+        <span class="initials" id="bioModalInitials"></span>
+      </div>
+      <div class="bio-modal-body">
+        <div class="bio-modal-eyebrow" id="bioModalEyebrow">Investment Team</div>
+        <h2 id="bioModalName"></h2>
+        <div class="bio-modal-role" id="bioModalRole"></div>
+
+        <dl class="bio-modal-meta" id="bioModalMeta"></dl>
+
+        <div class="bio-modal-bio" id="bioModalBio"></div>
+
+        <div class="bio-modal-section" id="bioModalEducationSection" hidden>
+          <h5>Education</h5>
+          <ul id="bioModalEducation"></ul>
+        </div>
+
+        <div class="bio-modal-section" id="bioModalPriorSection" hidden>
+          <h5>Prior experience</h5>
+          <ul id="bioModalPrior"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cta">
+  <div class="container">
+    <span class="eyebrow on-dark reveal">Build with us</span>
+    <h2 class="reveal" style="--reveal-delay: 0.1s">Careers in global credit.</h2>
+    <p class="lead reveal" style="--reveal-delay: 0.2s">
+      We hire investors and operators who share our standards, our curiosity and our patience.
+    </p>
+    <div class="reveal" style="--reveal-delay: 0.3s">
+      <a href="contact.html#careers" class="btn btn-light">
+        See open roles
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M8 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true" style="color: #fff;">
+            <svg viewBox="0 0 42 42" fill="none">
+              <rect width="42" height="42" fill="currentColor"/>
+              <text x="21" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#0c2340" font-weight="500">O</text>
+            </svg>
+          </span>
+          <span class="brand-text">Oak Hill Advisors<small>A T. Rowe Price Company</small></span>
+        </a>
+        <p>A global credit-focused alternative asset manager investing on behalf of institutions and individuals worldwide.</p>
+      </div>
+      <div class="footer-col"><h5>Firm</h5><ul><li><a href="about.html">About</a></li><li><a href="team.html">Investment team</a></li><li><a href="about.html#history">History</a></li><li><a href="about.html#offices">Offices</a></li><li><a href="contact.html#careers">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Strategies</h5><ul><li><a href="strategies.html#private-credit">Private credit</a></li><li><a href="strategies.html#high-yield">High yield &amp; loans</a></li><li><a href="strategies.html#distressed">Distressed</a></li><li><a href="strategies.html#clo">CLOs</a></li><li><a href="strategies.html#structured">Structured credit</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="insights.html">Insights</a></li><li><a href="insights.html">Market outlook</a></li><li><a href="insights.html">Press releases</a></li><li><a href="contact.html">Investor relations</a></li></ul></div>
+      <div class="footer-col footer-newsletter">
+        <h5>Quarterly outlook</h5>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.6);">Our quarterly commentary, in your inbox.</p>
+        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+          <input type="email" placeholder="you@firm.com" required />
+          <button type="submit">Subscribe
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Oak Hill Advisors, L.P. All rights reserved.</div>
+      <div class="legal"><a href="#">Legal</a><a href="#">Privacy</a><a href="#">Form ADV</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/team-data.js"></script>
+<script src="assets/js/team.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
