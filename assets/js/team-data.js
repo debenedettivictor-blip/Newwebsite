@@ -31,6 +31,22 @@ const TEAM = [
   },
 
   {
+    name: "Danny Ackerman",
+    title: "Managing Director",
+    office: "New York",
+    focus: ["High Yield"],
+    joined: "",
+    photo: "assets/img/team/danny-ackerman.jpg",
+    bio: "Danny Ackerman is an investment professional at Oak Hill Advisors with primary research responsibility for the software and technology sector.\n\nMr. Ackerman previously worked on OHA's trading desk, where he focused on leveraged loans before moving into research and coverage.",
+    education: [
+      "B.A., University of Michigan"
+    ],
+    prior: [
+      "Oak Hill Advisors · Trading desk (leveraged loans)"
+    ]
+  },
+
+  {
     name: "Harpreet S. Anand",
     title: "Partner & Portfolio Manager",
     office: "New York",
@@ -116,6 +132,22 @@ const TEAM = [
   },
 
   {
+    name: "Victor Debenedetti",
+    title: "Managing Director",
+    office: "New York",
+    focus: ["High Yield"],
+    joined: "",
+    photo: "assets/img/team/victor-debenedetti.jpg",
+    bio: "Victor Debenedetti is an investment professional at Oak Hill Advisors with primary research responsibility for the Healthcare sector.\n\nHe previously covered Services, Financials and Insurance Brokerage. Mr. Debenedetti initially joined OHA as an analyst in the U.S. leveraged loan trading group and has progressed through Analyst, Associate, Vice President, Principal and Managing Director roles at the firm.",
+    education: [
+      "B.A. in Economics and History (minor in Mathematics), University of Pennsylvania"
+    ],
+    prior: [
+      "Morgan Stanley · Analyst, CEEMEA corporate and sovereign trading (cash and derivatives)"
+    ]
+  },
+
+  {
     name: "Nathaniel H. Furman",
     title: "Partner",
     office: "New York",
@@ -132,6 +164,23 @@ const TEAM = [
       "Southpaw Asset Management · Managing Director (distressed/stressed)",
       "Airlie Group · Director of Research",
       "Salomon Brothers · Analyst"
+    ]
+  },
+
+  {
+    name: "Rachel Gross",
+    title: "Managing Director",
+    office: "New York",
+    focus: ["High Yield"],
+    joined: "",
+    photo: "assets/img/team/rachel-gross.jpg",
+    bio: "Rachel Gross is an investment professional at Oak Hill Advisors with research responsibility for the business services, industrials and building products industries. She previously focused on healthcare credit.",
+    education: [
+      "B.A. with Distinction, Cornell University",
+      "CFA Level I"
+    ],
+    prior: [
+      "Bloomberg · Fixed Income & Structured Credit Product Specialist (Financial Analytics)"
     ]
   },
 
@@ -321,6 +370,25 @@ const TEAM = [
       "GoldenTree Asset Management · Partner & Portfolio Manager, Head of European Research (consumer/retail/leisure; European CLOs)",
       "PSAM",
       "Goldman Sachs"
+    ]
+  },
+
+  {
+    name: "Sonja Renander",
+    title: "Managing Director · U.S. Credit",
+    office: "New York",
+    focus: ["Leadership"],
+    joined: "2023",
+    photo: "assets/img/team/sonja-renander.jpg",
+    bio: "Sonja Renander is responsible for the management of investment processes for OHA's U.S. Credit team — including talent management, business process evolution and technology innovation.\n\nShe joined the firm in 2023 from Bridgewater Associates, where she was Head of Solutions Management and Co-Chair of the Commercial Committee. Earlier in her career she served in senior policy roles at the World Bank and the U.S. Department of the Treasury.",
+    education: [
+      "M.S. in Foreign Service · International Finance and Commerce, Georgetown University",
+      "B.A., St. Olaf College"
+    ],
+    prior: [
+      "Bridgewater Associates · Head of Solutions Management & Co-Chair, Commercial Committee",
+      "The World Bank · Senior Advisor and Acting Alternate U.S. Executive Director (2009–2011)",
+      "U.S. Department of the Treasury · Senior Advisor / International Economist (2003–2009)"
     ]
   },
 
