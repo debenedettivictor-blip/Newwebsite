@@ -1,45 +1,53 @@
 # Oak Hill Advisors — Redesigned Website
 
-A redesigned marketing site for Oak Hill Advisors, a global credit-focused
-alternative asset manager and a wholly-owned subsidiary of T. Rowe Price.
-
-The redesign aims to surpass the existing oakhilladvisors.com on three axes:
-
-1. **Editorial clarity** — a bold, serif-driven hero and a story-led
-   structure (firm → strategies → approach → insights → presence → CTA)
-   that mirrors the best institutional credit managers (Apollo, Ares,
-   Blackstone, Brookfield).
-2. **Information density that breathes** — hard-hitting numbers (AUM,
-   capital deployed, CLO issuance, headcount) on the surface, with
-   detail on demand on dedicated strategy pages.
-3. **Modern, restrained motion** — subtle scroll reveals, animated
-   counters, hover affordances, full keyboard and reduced-motion support.
+Elegant, photography-forward redesign of oakhilladvisors.com — inspired by
+Blackstone, Apollo and Brookfield. Clean white pages, navy blue brand color,
+serif display typography, generous whitespace.
 
 ## Pages
 
 | File              | Purpose |
 |-------------------|---------|
-| `index.html`      | Home: hero, stats, intro, strategy summary, principles, insights teasers, global presence, CTA |
+| `index.html`      | Home: hero with One Vanderbilt photo, intro, four strategies, HQ feature, navy principles band, insights, six offices, CTA |
 | `strategies.html` | Detailed breakdown of private credit, high yield & loans, distressed, CLOs, structured credit |
-| `about.html`      | Firm history timeline, leadership, culture, offices |
-| `insights.html`   | Filterable insights / market outlook / press releases |
-| `contact.html`    | Contact form, IR/media/general details, careers listings |
+| `about.html`      | Firm history timeline, leadership, offices |
+| `insights.html`   | Filterable insights / outlook / press grid |
+| `contact.html`    | Contact form + careers listings |
 
 ## Design system
 
-- **Palette** — deep oak green `#2f5d4a`, gold accent `#c8a45a`, near-black
-  background `#0b1611`, cream text `#f4efe4`. Sophisticated, institutional,
-  warm rather than cold.
-- **Typography** — Cormorant Garamond (serif display) + Inter (UI).
-- **Layout** — 1280px max container, generous vertical rhythm, asymmetric
-  two-column section heads.
-- **Motion** — IntersectionObserver-driven reveal, eased number counters,
-  honors `prefers-reduced-motion`.
+- **Palette** — navy `#0c2340` (the OHA blue) with white, warm cream
+  `#f7f4ec` and a deep gold accent `#b8954a`.
+- **Typography** — Cormorant Garamond (serif display, used everywhere
+  for headlines and brand) + Inter (UI body).
+- **Layout** — 1280px container, generous vertical rhythm, photography
+  on every major section.
+- **Motion** — restrained: subtle scroll reveals, gentle photo zoom on
+  card hover. Honors `prefers-reduced-motion`.
+
+## Adding photography
+
+The site references several local image paths. Drop your real photos in
+`assets/img/` to make them appear — the layout falls back to elegant
+gradient placeholders if any image is missing.
+
+| Path | Where it appears |
+|------|------------------|
+| `assets/img/one-vanderbilt-hero.jpg` | Full-bleed hero on the home page (cinematic, ~2400×1400 ideal) |
+| `assets/img/one-vanderbilt.jpg` | Headquarters feature panel on the home page (vertical works well, ~1200×1500) |
+| `assets/img/strategy-private-credit.jpg` | Private credit strategy card |
+| `assets/img/strategy-high-yield.jpg` | High yield strategy card |
+| `assets/img/strategy-distressed.jpg` | Distressed strategy card |
+| `assets/img/strategy-clo.jpg` | CLO strategy card |
+| `assets/img/insight-1.jpg` … `insight-9.jpg` | Insights cards |
+
+For best results use high-quality 16:9 or 4:3 images at 1600px+ wide. JPG
+or WebP both work.
 
 ## Stack
 
-Static HTML/CSS/JS — no build step. Drop the directory on any static host
-(Netlify, Vercel, S3, GitHub Pages) and it will run.
+Static HTML / CSS / JS — no build step. Drop the directory on Netlify,
+Vercel, S3, GitHub Pages or any other static host.
 
 ```
 .
@@ -50,24 +58,23 @@ Static HTML/CSS/JS — no build step. Drop the directory on any static host
 ├── contact.html
 └── assets/
     ├── css/styles.css
-    └── js/main.js
+    ├── js/main.js
+    └── img/        ← drop photographs here
 ```
 
 ## Local preview
 
 ```bash
 python3 -m http.server 8000
-# then open http://localhost:8000
+# open http://localhost:8000
 ```
 
-## Notes & disclaimers
+## Notes
 
-- Statistics shown (AUM, deployment figures, office locations, dates)
-  reflect publicly reported information about Oak Hill Advisors as of
-  late 2025 / early 2026 from public press releases and the firm's own
-  disclosures. Numbers should be reviewed and updated by the firm before
-  any production use.
+- AUM, deployment figures, office locations and dates reflect publicly
+  reported information from late 2025 / early 2026. They should be
+  reviewed by the firm before any production use.
 - Leadership names on the about page are illustrative placeholders for
-  layout demonstration; the firm's actual senior team would replace them.
+  layout demonstration.
 - This is an unofficial concept redesign and is not affiliated with
   Oak Hill Advisors, L.P. or T. Rowe Price.

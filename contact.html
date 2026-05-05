@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Oak Hill Advisors</title>
   <meta name="description" content="Connect with Oak Hill Advisors' investor relations team and explore careers in global credit." />
+  <meta name="theme-color" content="#0c2340" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232f5d4a'/%3E%3Cpath d='M16 6 C 11 9, 9 14, 11 19 C 13 17, 15 16, 16 16 C 17 16, 19 17, 21 19 C 23 14, 21 9, 16 6 Z' fill='%23d4a843'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c2340'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia' font-size='14' fill='%23ffffff'%3EO%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
@@ -19,8 +20,8 @@
       <a href="index.html" class="brand">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 42 42" fill="none">
-            <path d="M21 7 C 14 11, 11 17, 13 24 C 16 21, 19 19, 21 19 C 23 19, 26 21, 29 24 C 31 17, 28 11, 21 7 Z" fill="#d4a843"/>
-            <path d="M21 19 V 35" stroke="#d4a843" stroke-width="0.8" stroke-linecap="round"/>
+            <rect width="42" height="42" fill="currentColor"/>
+            <text x="21" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#ffffff" font-weight="500">O</text>
           </svg>
         </span>
         <span class="brand-text">Oak Hill Advisors<small>A T. Rowe Price Company</small></span>
@@ -30,11 +31,10 @@
         <li><a href="strategies.html">Strategies</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="insights.html">Insights</a></li>
-        <li><a href="about.html#leadership">Leadership</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <a href="contact.html" class="nav-cta">Investor Login
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </nav>
@@ -45,7 +45,7 @@
   <div class="container">
     <div class="breadcrumbs reveal"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</div>
     <span class="eyebrow reveal">Get in touch</span>
-    <h1 class="reveal" style="--reveal-delay: 0.1s">We'd be glad to hear from you.</h1>
+    <h1 class="reveal" style="--reveal-delay: 0.1s; margin-top: 1.5rem;">We'd be glad to hear from you.</h1>
     <p class="lead reveal" style="--reveal-delay: 0.2s">
       Whether you're an institutional investor, a financial advisor, a journalist or a candidate, our team is here to help.
     </p>
@@ -82,23 +82,11 @@
 
       <form class="contact-form reveal" style="--reveal-delay: 0.1s" data-contact-form>
         <div class="field-row">
-          <div class="field">
-            <label for="first">First name</label>
-            <input id="first" name="first" type="text" required />
-          </div>
-          <div class="field">
-            <label for="last">Last name</label>
-            <input id="last" name="last" type="text" required />
-          </div>
+          <div class="field"><label for="first">First name</label><input id="first" name="first" type="text" required /></div>
+          <div class="field"><label for="last">Last name</label><input id="last" name="last" type="text" required /></div>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-        </div>
-        <div class="field">
-          <label for="org">Organization</label>
-          <input id="org" name="org" type="text" />
-        </div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+        <div class="field"><label for="org">Organization</label><input id="org" name="org" type="text" /></div>
         <div class="field">
           <label for="role">I am a…</label>
           <select id="role" name="role">
@@ -110,11 +98,8 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="field">
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
           Send message
           <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M8 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -126,46 +111,74 @@
   </div>
 </section>
 
-<!-- Careers -->
-<section id="careers" style="background: var(--color-bg-elevated); border-top: 1px solid var(--color-line);">
+<section id="careers" style="background: var(--color-bg-alt);">
   <div class="container">
     <div class="section-head">
       <div class="reveal">
         <span class="eyebrow">Careers</span>
-        <h2 style="margin-top: 1.5rem;">Join a specialist firm.</h2>
+        <h2>Join a specialist firm.</h2>
       </div>
       <p class="lead reveal" style="--reveal-delay: 0.1s">
-        We are always interested in talking with exceptional credit investors, technologists, operators and client-facing professionals. Selected open roles below.
+        We are always interested in talking with exceptional credit investors, technologists, operators and client-facing professionals.
       </p>
     </div>
 
     <div class="strategy-grid">
       <a href="#" class="strategy-card reveal">
-        <span class="index">Investment</span>
-        <h3>Vice President, Private Credit</h3>
-        <p>Underwrite and monitor senior secured private credit investments. New York, full-time.</p>
-        <div class="meta"><span class="figure">New York</span><svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="strategy-card-photo">
+          <div class="fallback"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6"><rect x="20" y="35" width="60" height="40" rx="2"/></svg></div>
+        </div>
+        <div class="strategy-card-body">
+          <span class="index">Investment</span>
+          <h3>Vice President, Private Credit</h3>
+          <p>Underwrite and monitor senior secured private credit investments. New York, full-time.</p>
+          <div class="strategy-card-meta">
+            <span class="figure">New York</span>
+            <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
       </a>
-
       <a href="#" class="strategy-card reveal" style="--reveal-delay: 0.05s">
-        <span class="index">Investment</span>
-        <h3>Associate, European High Yield</h3>
-        <p>Cover European corporate issuers across leveraged finance. London, full-time.</p>
-        <div class="meta"><span class="figure">London</span><svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="strategy-card-photo">
+          <div class="fallback"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6"><path d="M15 75 L 35 60 L 50 65 L 70 40 L 85 30"/></svg></div>
+        </div>
+        <div class="strategy-card-body">
+          <span class="index">Investment</span>
+          <h3>Associate, European High Yield</h3>
+          <p>Cover European corporate issuers across leveraged finance. London, full-time.</p>
+          <div class="strategy-card-meta">
+            <span class="figure">London</span>
+            <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
       </a>
-
       <a href="#" class="strategy-card reveal" style="--reveal-delay: 0.1s">
-        <span class="index">Technology</span>
-        <h3>Senior Engineer, Investment Platform</h3>
-        <p>Build the data and analytics tools that power OHA's research and portfolio management. New York or Fort Worth.</p>
-        <div class="meta"><span class="figure">Hybrid</span><svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="strategy-card-photo">
+          <div class="fallback"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6"><rect x="25" y="25" width="50" height="50" rx="4"/><line x1="35" y1="40" x2="65" y2="40"/><line x1="35" y1="50" x2="55" y2="50"/></svg></div>
+        </div>
+        <div class="strategy-card-body">
+          <span class="index">Technology</span>
+          <h3>Senior Engineer, Investment Platform</h3>
+          <p>Build the data and analytics tools that power OHA's research and portfolio management.</p>
+          <div class="strategy-card-meta">
+            <span class="figure">Hybrid</span>
+            <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
       </a>
-
       <a href="#" class="strategy-card reveal" style="--reveal-delay: 0.15s">
-        <span class="index">Client</span>
-        <h3>Director, Investor Relations — APAC</h3>
-        <p>Lead client coverage for institutions across Asia-Pacific. Hong Kong or Sydney.</p>
-        <div class="meta"><span class="figure">APAC</span><svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="strategy-card-photo">
+          <div class="fallback"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6"><circle cx="50" cy="40" r="14"/><path d="M25 80 Q 50 60 75 80"/></svg></div>
+        </div>
+        <div class="strategy-card-body">
+          <span class="index">Client</span>
+          <h3>Director, Investor Relations — APAC</h3>
+          <p>Lead client coverage for institutions across Asia-Pacific. Hong Kong or Sydney.</p>
+          <div class="strategy-card-meta">
+            <span class="figure">APAC</span>
+            <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
       </a>
     </div>
   </div>
@@ -176,10 +189,10 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark" aria-hidden="true" style="color: #fff;">
             <svg viewBox="0 0 42 42" fill="none">
-              <path d="M21 7 C 14 11, 11 17, 13 24 C 16 21, 19 19, 21 19 C 23 19, 26 21, 29 24 C 31 17, 28 11, 21 7 Z" fill="#d4a843"/>
-              <path d="M21 19 V 35" stroke="#d4a843" stroke-width="0.8" stroke-linecap="round"/>
+              <rect width="42" height="42" fill="currentColor"/>
+              <text x="21" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="22" fill="#0c2340" font-weight="500">O</text>
             </svg>
           </span>
           <span class="brand-text">Oak Hill Advisors<small>A T. Rowe Price Company</small></span>
@@ -190,10 +203,10 @@
       <div class="footer-col"><h5>Strategies</h5><ul><li><a href="strategies.html#private-credit">Private credit</a></li><li><a href="strategies.html#high-yield">High yield &amp; loans</a></li><li><a href="strategies.html#distressed">Distressed</a></li><li><a href="strategies.html#clo">CLOs</a></li><li><a href="strategies.html#structured">Structured credit</a></li></ul></div>
       <div class="footer-col"><h5>Resources</h5><ul><li><a href="insights.html">Insights</a></li><li><a href="insights.html">Market outlook</a></li><li><a href="insights.html">Press releases</a></li><li><a href="contact.html">Investor relations</a></li></ul></div>
       <div class="footer-col footer-newsletter">
-        <h5>Stay informed</h5>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted);">Quarterly outlooks in your inbox.</p>
+        <h5>Quarterly outlook</h5>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.6);">Our quarterly commentary, in your inbox.</p>
         <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
-          <input type="email" placeholder="Email address" required />
+          <input type="email" placeholder="you@firm.com" required />
           <button type="submit">Subscribe
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
