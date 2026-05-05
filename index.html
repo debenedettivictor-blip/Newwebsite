@@ -4,23 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oak Hill Advisors — A Global Credit-Focused Alternative Asset Manager</title>
-  <meta name="description" content="Oak Hill Advisors is a leading global credit-focused alternative asset manager with $111B AUM and 35+ years of experience across private credit, high yield, leveraged loans, distressed debt and CLOs." />
-  <meta name="theme-color" content="#0b1611" />
+  <meta name="description" content="Oak Hill Advisors is a leading global credit-focused alternative asset manager with $111B AUM and 38+ years of experience across private credit, high yield, leveraged loans, distressed debt and CLOs." />
+  <meta name="theme-color" content="#0a0e0c" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232f5d4a'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia' font-size='13' fill='%23f4efe4'%3EO%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232f5d4a'/%3E%3Cpath d='M16 6 C 11 9, 9 14, 11 19 C 13 17, 15 16, 16 16 C 17 16, 19 17, 21 19 C 23 14, 21 9, 16 6 Z' fill='%23d4a843'/%3E%3C/svg%3E" />
 </head>
-<body>
+<body class="has-pulse">
+
+<!-- Live market pulse strip -->
+<div class="pulse-bar is-active" aria-label="Live market data ticker">
+  <div class="pulse-track" id="pulseTrack">
+    <!-- Items injected by JS for seamless looping -->
+  </div>
+</div>
 
 <!-- Header -->
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
       <a href="index.html" class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none">
+            <circle cx="21" cy="21" r="20" stroke="currentColor" stroke-opacity="0.3" stroke-width="0.5"/>
+            <path d="M21 7 C 14 11, 11 17, 13 24 C 16 21, 19 19, 21 19 C 23 19, 26 21, 29 24 C 31 17, 28 11, 21 7 Z" fill="#d4a843"/>
+            <path d="M21 19 V 35" stroke="#d4a843" stroke-width="0.8" stroke-linecap="round"/>
+          </svg>
+        </span>
         <span class="brand-text">
           Oak Hill Advisors
           <small>A T. Rowe Price Company</small>
@@ -48,171 +61,318 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- ============================================================
+     Hero — editorial / typographic
+     ============================================================ -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div>
-        <span class="eyebrow reveal">Global Credit · Est. 1987</span>
-        <h1 class="hero-headline reveal" style="--reveal-delay: 0.1s">
-          Disciplined credit.<br/>
-          <em>Enduring conviction.</em>
-        </h1>
-        <p class="hero-subhead reveal" style="--reveal-delay: 0.25s">
-          For nearly four decades, Oak Hill Advisors has partnered with institutions and individuals to deliver attractive risk-adjusted returns across the full spectrum of global credit markets.
+  <div class="hero-canvas"></div>
+
+  <!-- Decorative oak leaf -->
+  <svg class="leaf-bg" viewBox="0 0 400 500" fill="none" aria-hidden="true">
+    <path d="M200 30 Q 280 80 290 180 Q 360 200 350 300 Q 280 320 260 380 Q 230 460 200 480 Q 170 460 140 380 Q 120 320 50 300 Q 40 200 110 180 Q 120 80 200 30 Z"
+          stroke="#d4a843" stroke-width="0.8" fill="none" />
+    <path d="M200 30 V 480" stroke="#d4a843" stroke-width="0.5" />
+    <path d="M200 110 Q 240 130 270 170 M 200 180 Q 250 200 290 240 M 200 250 Q 240 270 280 310 M 200 320 Q 230 340 260 380 M 200 70 Q 170 90 130 130 M 200 140 Q 160 160 110 200 M 200 220 Q 160 240 120 280 M 200 290 Q 170 310 140 360" stroke="#d4a843" stroke-width="0.4" />
+  </svg>
+
+  <div class="container hero-inner">
+
+    <div class="hero-tagline">
+      <span><strong>Oak Hill Advisors</strong> · Est. 1987 · New York / London / Hong Kong / Sydney</span>
+      <span class="live-pill">Markets open · NYSE</span>
+    </div>
+
+    <h1 class="hero-headline">
+      <span class="line">Disciplined</span>
+      <span class="line"><em>credit.</em></span>
+      <span class="line"><span class="underline-word">Enduring</span> conviction.</span>
+    </h1>
+
+    <div class="hero-grid">
+      <div class="reveal">
+        <p class="col-lead">
+          For nearly four decades, Oak Hill Advisors has been a <strong>global credit-focused alternative asset manager</strong> — partnering with institutions and individuals to deliver attractive risk-adjusted returns across the full credit spectrum.
         </p>
-        <div class="hero-actions reveal" style="--reveal-delay: 0.4s">
+        <div class="hero-actions" style="margin-top: 2.5rem;">
           <a href="strategies.html" class="btn btn-primary">
             Explore strategies
             <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M8 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="about.html" class="btn btn-ghost">
-            About the firm
-          </a>
+          <a href="about.html" class="btn btn-ghost">About the firm</a>
         </div>
       </div>
 
-      <aside class="hero-meta reveal" style="--reveal-delay: 0.55s" aria-label="Firm at a glance">
-        <div class="hero-meta-item">
-          <div class="label">Assets under management</div>
-          <div class="value">$<span data-count="111" data-decimals="0">111</span>B+</div>
-          <div class="desc">Across global credit strategies (Dec. 2025)</div>
+      <div class="hero-figures reveal" style="--reveal-delay: 0.2s">
+        <div class="figure-row">
+          <div class="lbl">Assets under<br/>management</div>
+          <div class="val"><span class="unit">$</span><span data-count="111">111</span><span class="unit">B+</span></div>
         </div>
-        <div class="hero-meta-item">
-          <div class="label">Track record</div>
-          <div class="value"><span data-count="38" data-decimals="0">38</span> Years</div>
-          <div class="desc">Investing across multiple market cycles</div>
+        <div class="figure-row">
+          <div class="lbl">Years investing<br/>across cycles</div>
+          <div class="val"><span data-count="38">38</span></div>
         </div>
-        <div class="hero-meta-item">
-          <div class="label">Global reach</div>
-          <div class="value"><span data-count="6" data-decimals="0">6</span> Offices</div>
-          <div class="desc">400+ professionals on three continents</div>
+        <div class="figure-row">
+          <div class="lbl">Global investment<br/>professionals</div>
+          <div class="val"><span data-count="400">400</span><span class="unit">+</span></div>
         </div>
-      </aside>
+      </div>
     </div>
+
   </div>
 
-  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+  <div class="hero-scroll-hint">Scroll to explore</div>
 </section>
 
-<!-- Stats band -->
-<section class="stats-band" aria-label="Key figures">
+<!-- ============================================================
+     AUM Growth Chart
+     ============================================================ -->
+<section class="aum-section">
   <div class="container">
-    <div class="stats-grid reveal">
-      <div class="stat">
-        <div class="num">$<span data-count="111">0</span>B</div>
-        <div class="lbl">AUM across credit strategies</div>
+    <div class="aum-grid">
+      <div class="aum-text reveal">
+        <span class="eyebrow">By the numbers</span>
+        <h2>Compound trust. Compound capital.</h2>
+        <p class="lead">
+          From a single high-yield strategy in 1987 to $111 billion across global credit today — built one credit, one cycle, one client at a time.
+        </p>
       </div>
-      <div class="stat">
-        <div class="num">$<span data-count="58.9" data-decimals="1">0</span>B</div>
-        <div class="lbl">Deployed across 460+ private credit investments</div>
-      </div>
-      <div class="stat">
-        <div class="num">$<span data-count="31" data-decimals="0">0</span>B</div>
-        <div class="lbl">Of CLO issuance since 2001</div>
-      </div>
-      <div class="stat">
-        <div class="num"><span data-count="400" data-decimals="0">0</span>+</div>
-        <div class="lbl">Investment & operations professionals</div>
+
+      <div class="aum-chart-wrap reveal" style="--reveal-delay: 0.15s">
+        <div class="chart-head">
+          <div>
+            <div class="title">Assets under management ($B)</div>
+            <div class="current">$111B</div>
+            <div class="delta">▲ Compounded across multiple cycles</div>
+          </div>
+          <div style="text-align: right;">
+            <div class="title" style="color: var(--color-gold);">1987 → 2025</div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-muted); margin-top: 0.4rem;">38 yrs · 6 offices</div>
+          </div>
+        </div>
+
+        <div class="aum-chart">
+          <svg viewBox="0 0 600 240" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="aumGradient" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#d4a843" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#d4a843" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Grid -->
+            <line class="grid-line" x1="0" y1="40" x2="600" y2="40"/>
+            <line class="grid-line" x1="0" y1="100" x2="600" y2="100"/>
+            <line class="grid-line" x1="0" y1="160" x2="600" y2="160"/>
+            <line class="grid-line" x1="0" y1="220" x2="600" y2="220"/>
+
+            <text class="axis-label" x="0" y="35">$120B</text>
+            <text class="axis-label" x="0" y="95">$80B</text>
+            <text class="axis-label" x="0" y="155">$40B</text>
+            <text class="axis-label" x="0" y="215">$0</text>
+
+            <!-- Area -->
+            <path class="area" d="M 30 218 L 80 215 L 130 211 L 180 200 L 230 182 L 280 158 L 330 130 L 380 102 L 430 78 L 480 56 L 530 38 L 570 28 L 570 220 L 30 220 Z"/>
+
+            <!-- Line -->
+            <path class="line" d="M 30 218 L 80 215 L 130 211 L 180 200 L 230 182 L 280 158 L 330 130 L 380 102 L 430 78 L 480 56 L 530 38 L 570 28"/>
+
+            <!-- Dots -->
+            <circle class="dot" cx="30" cy="218" r="3"/>
+            <circle class="dot" cx="180" cy="200" r="3"/>
+            <circle class="dot" cx="280" cy="158" r="3"/>
+            <circle class="dot" cx="380" cy="102" r="3"/>
+            <circle class="dot" cx="480" cy="56" r="3"/>
+            <circle class="dot last" cx="570" cy="28" r="6"/>
+
+            <!-- X-axis labels -->
+            <text class="axis-label" x="30" y="238" text-anchor="middle">'87</text>
+            <text class="axis-label" x="180" y="238" text-anchor="middle">'00</text>
+            <text class="axis-label" x="280" y="238" text-anchor="middle">'08</text>
+            <text class="axis-label" x="380" y="238" text-anchor="middle">'15</text>
+            <text class="axis-label" x="480" y="238" text-anchor="middle">'21</text>
+            <text class="axis-label" x="570" y="238" text-anchor="middle">'25</text>
+          </svg>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-subtle); letter-spacing: 0.1em; text-transform: uppercase;">
+            Source · Firm disclosures (Dec 2025)
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-gold); letter-spacing: 0.1em; text-transform: uppercase;">
+            T. Rowe Price acquisition · 2021 ⚲
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Intro -->
-<section class="intro">
-  <div class="container">
-    <div class="intro-grid">
-      <div class="reveal">
-        <span class="eyebrow">The firm</span>
-        <h2 style="margin-top: 1.5rem;">A single platform for the full credit spectrum.</h2>
-      </div>
-      <div class="intro-body reveal" style="--reveal-delay: 0.15s">
-        <p>
-          Oak Hill Advisors is a <strong>global credit-focused alternative asset manager</strong> with deep expertise across performing and distressed credit, high yield bonds, leveraged loans, private credit, structured products and direct lending.
-        </p>
-        <p>
-          We bring the rigor of fundamental, value-oriented research to every position we hold. Our portfolios are built one credit at a time — and our long-term partnerships with companies, sponsors and operators give us access to a proprietary opportunity set that few peers can match.
-        </p>
-        <p>
-          Since 2021, OHA has been a wholly-owned subsidiary of <strong>T. Rowe Price</strong>, combining the agility and credit-investment discipline of an independent specialist with the strength, stability and global distribution of one of the world's largest asset managers.
-        </p>
-        <a href="about.html" class="intro-link">
-          Read our story
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Strategies -->
+<!-- ============================================================
+     Strategies
+     ============================================================ -->
 <section class="strategies" id="strategies">
   <div class="container">
     <div class="section-head">
       <div class="reveal">
-        <span class="eyebrow">Strategies</span>
-        <h2 style="margin-top: 1.5rem;">Built around the way credit actually trades.</h2>
+        <div class="index-num">§ 02 / Strategies</div>
+        <span class="eyebrow">Where we invest</span>
+        <h2>Built around the way credit actually trades.</h2>
       </div>
       <p class="lead reveal" style="--reveal-delay: 0.1s">
-        Our investment platform spans liquid, illiquid and bespoke private credit, allowing us to construct portfolios that are responsive to where we are in the cycle — and to where each company stands within its capital structure.
+        Liquid and illiquid. Performing and distressed. Senior and subordinated. Our platform spans the full credit spectrum — and a single, integrated investment process binds it together.
       </p>
     </div>
 
     <div class="strategy-grid">
+      <!-- Private Credit -->
       <a href="strategies.html#private-credit" class="strategy-card reveal">
-        <span class="index">01 / Private Credit</span>
-        <h3>Direct lending & private credit</h3>
+        <svg class="card-bg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#14322a" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#0f1411" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="400" fill="url(#sg1)"/>
+          <g stroke="#d4a843" stroke-width="0.5" fill="none" opacity="0.35">
+            <circle cx="320" cy="80" r="60"/>
+            <circle cx="320" cy="80" r="100"/>
+            <circle cx="320" cy="80" r="140"/>
+            <line x1="320" y1="0" x2="320" y2="220"/>
+            <line x1="220" y1="80" x2="420" y2="80"/>
+          </g>
+        </svg>
+        <div class="strategy-card-top">
+          <span class="index">01 / Private Credit</span>
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="6" y="14" width="36" height="26" rx="2"/>
+            <path d="M6 22h36M14 14V8h20v6"/>
+            <circle cx="24" cy="28" r="4"/>
+          </svg>
+        </div>
+        <h3>Direct lending<br/>&amp; private credit</h3>
         <p>Senior secured, unitranche and junior capital solutions for upper-middle-market and large-cap companies — typically alongside leading sponsors and operators.</p>
         <div class="meta">
           <span class="figure">$58.9B+ deployed</span>
-          <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="arrow-icon" width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
 
+      <!-- High Yield -->
       <a href="strategies.html#high-yield" class="strategy-card reveal" style="--reveal-delay: 0.05s">
-        <span class="index">02 / Liquid Credit</span>
-        <h3>High yield bonds & leveraged loans</h3>
-        <p>Active, value-oriented investing across the global non-investment-grade markets — focused on credits with a high probability of positive rating, refinancing or capital-structure events.</p>
+        <svg class="card-bg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="url(#sg1)"/>
+          <g stroke="#d4a843" stroke-width="0.5" fill="none" opacity="0.4">
+            <path d="M0 280 Q 80 240 160 260 T 320 220 T 480 200" />
+            <path d="M0 320 Q 80 280 160 290 T 320 260 T 480 240" opacity="0.6"/>
+            <path d="M0 360 Q 80 330 160 340 T 320 310 T 480 290" opacity="0.4"/>
+          </g>
+        </svg>
+        <div class="strategy-card-top">
+          <span class="index">02 / Liquid Credit</span>
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M6 36 L 16 24 L 24 30 L 36 14 L 42 18"/>
+            <path d="M36 14 H 30 M36 14 V 20" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>High yield bonds<br/>&amp; leveraged loans</h3>
+        <p>Active, value-oriented investing across the global non-investment-grade markets — focused on credits with high probability of positive rating or capital-structure events.</p>
         <div class="meta">
-          <span class="figure">Since 1987</span>
-          <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="figure">Investing since 1987</span>
+          <svg class="arrow-icon" width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
 
+      <!-- Distressed -->
       <a href="strategies.html#distressed" class="strategy-card reveal" style="--reveal-delay: 0.1s">
-        <span class="index">03 / Distressed</span>
-        <h3>Stressed & distressed credit</h3>
+        <svg class="card-bg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="url(#sg1)"/>
+          <g stroke="#d4a843" stroke-width="0.5" fill="none" opacity="0.35">
+            <path d="M0 200 L 50 160 L 100 240 L 150 100 L 200 280 L 250 140 L 300 200 L 350 80 L 400 220" />
+            <line x1="0" y1="200" x2="400" y2="200" stroke-dasharray="4 4" opacity="0.4"/>
+          </g>
+        </svg>
+        <div class="strategy-card-top">
+          <span class="index">03 / Distressed</span>
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M24 6 L 42 38 H 6 Z"/>
+            <line x1="24" y1="20" x2="24" y2="30"/>
+            <circle cx="24" cy="34" r="0.8" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Stressed &amp;<br/>distressed credit</h3>
         <p>Rescue financings, turnarounds, post-reorganization equities and process-driven distressed positions across both North American and European markets.</p>
         <div class="meta">
-          <span class="figure">Cycle-tested</span>
-          <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="figure">Cycle-tested · 5+ cycles</span>
+          <svg class="arrow-icon" width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
 
+      <!-- CLOs -->
       <a href="strategies.html#clo" class="strategy-card reveal" style="--reveal-delay: 0.15s">
-        <span class="index">04 / Structured</span>
-        <h3>Collateralized loan obligations</h3>
+        <svg class="card-bg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="url(#sg1)"/>
+          <g stroke="#d4a843" stroke-width="0.5" fill="none" opacity="0.35">
+            <rect x="280" y="60" width="80" height="20"/>
+            <rect x="270" y="90" width="100" height="20"/>
+            <rect x="260" y="120" width="120" height="20"/>
+            <rect x="250" y="150" width="140" height="20"/>
+            <rect x="240" y="180" width="160" height="20"/>
+          </g>
+        </svg>
+        <div class="strategy-card-top">
+          <span class="index">04 / Structured</span>
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="10" y="10" width="28" height="6"/>
+            <rect x="8" y="20" width="32" height="6"/>
+            <rect x="6" y="30" width="36" height="6"/>
+          </svg>
+        </div>
+        <h3>Collateralized<br/>loan obligations</h3>
         <p>One of the earliest CLO sponsors in the market, with a continuously refined approach to portfolio construction in both U.S. and European jurisdictions.</p>
         <div class="meta">
           <span class="figure">$31B+ issued since 2001</span>
-          <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="arrow-icon" width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15L15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Approach -->
+<!-- ============================================================
+     Manifesto pull-quote
+     ============================================================ -->
+<section class="manifesto">
+  <div class="container">
+    <div class="reveal">
+      <span class="quote-mark">&#8220;</span>
+      <p class="manifesto-quote">
+        We size positions for what can <em>go wrong</em>, not what can go right. Capital preservation is the <em>foundation</em> of long-term compounding.
+      </p>
+      <div class="manifesto-attr">
+        <strong>The OHA Investment Process</strong> · Five principles, one investment culture
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Approach / Principles
+     ============================================================ -->
 <section class="approach">
   <div class="container">
     <div class="approach-grid">
       <div class="reveal">
-        <span class="eyebrow">The OHA approach</span>
-        <h2 style="margin-top: 1.5rem;">Five principles that have guided our investing since day one.</h2>
+        <div class="index-num" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; color: var(--color-text-subtle); margin-bottom: 1rem;">§ 04 / The OHA Approach</div>
+        <span class="eyebrow">How we invest</span>
+        <h2 style="margin-top: 1.5rem;">Five principles. One investment culture.</h2>
         <p class="lead" style="margin-top: 2rem;">
           Markets change. Cycles turn. The fundamentals of how we underwrite, structure and manage credit do not.
         </p>
+        <div style="margin-top: 3rem;">
+          <a href="about.html" class="btn btn-ghost">Read the playbook
+            <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M8 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
 
       <div class="principles reveal" style="--reveal-delay: 0.15s">
@@ -222,6 +382,7 @@
             <h4>Fundamental, bottom-up research</h4>
             <p>Every position is the product of granular underwriting — capital structure, business durability, downside protection.</p>
           </div>
+          <span class="plus">+</span>
         </div>
         <div class="principle">
           <span class="num">02</span>
@@ -229,6 +390,7 @@
             <h4>One firm, one investment process</h4>
             <p>Investment professionals across credit asset classes share a single research platform, single risk framework and single set of incentives.</p>
           </div>
+          <span class="plus">+</span>
         </div>
         <div class="principle">
           <span class="num">03</span>
@@ -236,6 +398,7 @@
             <h4>Long-duration partnerships</h4>
             <p>Our relationships with sponsors, management teams and lenders span decades — generating proprietary opportunities others rarely see.</p>
           </div>
+          <span class="plus">+</span>
         </div>
         <div class="principle">
           <span class="num">04</span>
@@ -243,6 +406,7 @@
             <h4>Risk discipline above all</h4>
             <p>We size positions for what can go wrong, not what can go right. Capital preservation is the foundation of long-term compounding.</p>
           </div>
+          <span class="plus">+</span>
         </div>
         <div class="principle">
           <span class="num">05</span>
@@ -250,19 +414,23 @@
             <h4>Alignment with our investors</h4>
             <p>We are deeply co-invested with our clients — and we communicate with the candor that meaningful skin in the game demands.</p>
           </div>
+          <span class="plus">+</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Insights -->
+<!-- ============================================================
+     Insights
+     ============================================================ -->
 <section class="insights">
   <div class="container">
     <div class="section-head">
       <div class="reveal">
-        <span class="eyebrow">Insights</span>
-        <h2 style="margin-top: 1.5rem;">Perspectives on global credit.</h2>
+        <div class="index-num">§ 05 / Insights</div>
+        <span class="eyebrow">Latest thinking</span>
+        <h2>Perspectives on global credit.</h2>
       </div>
       <p class="lead reveal" style="--reveal-delay: 0.1s">
         Quarterly outlooks, sector deep-dives and timely commentary from across the OHA investment team.
@@ -270,47 +438,105 @@
     </div>
 
     <div class="insights-grid">
-      <article class="insight reveal">
-        <div class="insight-img gradient-1"></div>
-        <div class="insight-body">
-          <span class="insight-tag">Market Outlook · Q2 2026</span>
-          <h3>The next leg of the private credit cycle: discipline over deployment</h3>
-          <p>As spreads compress and fund-raising slows, the dispersion between top- and bottom-quartile managers is widening. Our framework for separating signal from noise.</p>
-          <div class="insight-meta">
-            <span>By the OHA Investment Team</span>
-            <span>9 min read</span>
+      <a href="insights.html" class="insight featured reveal">
+        <div class="insight-img gradient-1">
+          <div class="insight-img-art">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+              <circle cx="50" cy="50" r="42"/>
+              <circle cx="50" cy="50" r="30"/>
+              <circle cx="50" cy="50" r="18"/>
+              <circle cx="50" cy="50" r="6"/>
+              <line x1="50" y1="8" x2="50" y2="92"/>
+              <line x1="8" y1="50" x2="92" y2="50"/>
+              <line x1="20" y1="20" x2="80" y2="80"/>
+              <line x1="80" y1="20" x2="20" y2="80"/>
+            </svg>
           </div>
         </div>
-      </article>
+        <div class="insight-body">
+          <span class="insight-tag">Market Outlook · Q2 2026 · Featured</span>
+          <h3>The next leg of the private credit cycle: discipline over deployment</h3>
+          <p>As spreads compress and fund-raising slows, the dispersion between top- and bottom-quartile managers is widening. Our framework for separating signal from noise — and what we believe distinguishes the next vintage of winners.</p>
+          <div class="insight-meta"><span>By the OHA Investment Team</span><span>9 min read</span></div>
+        </div>
+      </a>
 
-      <article class="insight reveal" style="--reveal-delay: 0.05s">
-        <div class="insight-img gradient-2"></div>
+      <a href="insights.html" class="insight reveal" style="--reveal-delay: 0.05s">
+        <div class="insight-img gradient-2">
+          <div class="insight-img-art">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+              <rect x="20" y="35" width="20" height="40"/>
+              <rect x="42" y="20" width="20" height="55"/>
+              <rect x="64" y="50" width="20" height="25"/>
+              <line x1="10" y1="80" x2="92" y2="80"/>
+            </svg>
+          </div>
+        </div>
         <div class="insight-body">
           <span class="insight-tag">CLO Insights</span>
           <h3>European CLOs: structural strengths in a refinancing wave</h3>
           <p>Why we believe primary issuance in 2026 offers compelling relative value at the top of the capital stack.</p>
-          <div class="insight-meta">
-            <span>Apr 2026</span>
-            <span>6 min</span>
+          <div class="insight-meta"><span>Apr 2026</span><span>6 min</span></div>
+        </div>
+      </a>
+
+      <a href="insights.html" class="insight reveal" style="--reveal-delay: 0.1s">
+        <div class="insight-img gradient-3">
+          <div class="insight-img-art">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+              <path d="M 20 70 L 35 50 L 50 60 L 65 35 L 80 25" />
+              <circle cx="80" cy="25" r="3" fill="currentColor"/>
+            </svg>
           </div>
         </div>
-      </article>
-
-      <article class="insight reveal" style="--reveal-delay: 0.1s">
-        <div class="insight-img gradient-3"></div>
         <div class="insight-body">
           <span class="insight-tag">In the news</span>
-          <h3>OHA &amp; T. Rowe Price launch OFLEX, a multi-strategy credit interval fund</h3>
+          <h3>OHA &amp; T. Rowe Price launch OFLEX</h3>
           <p>Bringing institutional-grade credit access to U.S. wealth clients in a single, diversified vehicle.</p>
-          <div class="insight-meta">
-            <span>Press release</span>
-            <span>2026</span>
+          <div class="insight-meta"><span>Press · 2026</span><span>Press</span></div>
+        </div>
+      </a>
+
+      <a href="insights.html" class="insight reveal" style="--reveal-delay: 0.05s">
+        <div class="insight-img gradient-4">
+          <div class="insight-img-art">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+              <path d="M 50 15 L 80 70 H 20 Z"/>
+              <line x1="50" y1="35" x2="50" y2="55"/>
+              <circle cx="50" cy="62" r="1.5" fill="currentColor"/>
+            </svg>
           </div>
         </div>
-      </article>
+        <div class="insight-body">
+          <span class="insight-tag">Distressed</span>
+          <h3>What separates a stress event from a default cycle</h3>
+          <p>Leading indicators that have foreshadowed turns in default rates — and the ones that haven't.</p>
+          <div class="insight-meta"><span>Mar 2026</span><span>11 min</span></div>
+        </div>
+      </a>
+
+      <a href="insights.html" class="insight reveal" style="--reveal-delay: 0.1s">
+        <div class="insight-img gradient-5">
+          <div class="insight-img-art">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+              <rect x="25" y="20" width="50" height="60" rx="2"/>
+              <line x1="32" y1="32" x2="68" y2="32"/>
+              <line x1="32" y1="42" x2="60" y2="42"/>
+              <line x1="32" y1="52" x2="65" y2="52"/>
+              <line x1="32" y1="62" x2="55" y2="62"/>
+            </svg>
+          </div>
+        </div>
+        <div class="insight-body">
+          <span class="insight-tag">Private credit</span>
+          <h3>Documentation has become the new credit selection</h3>
+          <p>EBITDA add-backs, LMEs and the documents that protect — or fail to protect — lenders.</p>
+          <div class="insight-meta"><span>Feb 2026</span><span>7 min</span></div>
+        </div>
+      </a>
     </div>
 
-    <div style="margin-top: 3.5rem; text-align: center;">
+    <div style="margin-top: 4rem; text-align: center;">
       <a href="insights.html" class="btn btn-ghost">
         All insights
         <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M8 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -319,63 +545,137 @@
   </div>
 </section>
 
-<!-- Global presence -->
+<!-- ============================================================
+     Global Presence — interactive map
+     ============================================================ -->
 <section class="presence">
   <div class="container">
     <div class="presence-head reveal">
-      <span class="eyebrow">Global presence</span>
-      <h2 style="margin-top: 1.5rem;">Six offices. One investment culture.</h2>
+      <div class="index-num" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; color: var(--color-text-subtle); margin-bottom: 1rem;">§ 06 / Global Presence</div>
+      <span class="eyebrow">Six offices · One culture</span>
+      <h2 style="margin-top: 1.5rem;">Local insight. Global platform.</h2>
       <p class="lead">
-        Local teams, shared research, and a single, integrated investment process across North America, Europe and Asia.
+        Our investment teams are local to the credit markets they cover, while a single research platform and risk framework binds the firm together across three continents.
       </p>
     </div>
 
-    <div class="offices reveal">
-      <div class="office">
+    <div class="world-map reveal" id="worldMap">
+      <svg viewBox="0 0 1000 500" aria-label="Global office locations">
+        <!-- Dotted grid lines -->
+        <g class="grat">
+          <line x1="0" y1="125" x2="1000" y2="125"/>
+          <line x1="0" y1="250" x2="1000" y2="250"/>
+          <line x1="0" y1="375" x2="1000" y2="375"/>
+          <line x1="200" y1="0" x2="200" y2="500"/>
+          <line x1="400" y1="0" x2="400" y2="500"/>
+          <line x1="600" y1="0" x2="600" y2="500"/>
+          <line x1="800" y1="0" x2="800" y2="500"/>
+        </g>
+
+        <!-- Stylized continent shapes (simplified) -->
+        <g class="land">
+          <!-- North America -->
+          <path d="M 90 110 Q 130 90 200 100 L 240 130 L 260 180 L 250 230 L 220 260 L 190 280 L 150 290 L 120 270 L 90 230 L 80 170 Z"/>
+          <!-- South America -->
+          <path d="M 240 290 L 280 310 L 290 360 L 270 410 L 240 430 L 220 400 L 215 350 Z"/>
+          <!-- Europe -->
+          <path d="M 460 100 L 520 105 L 540 130 L 530 170 L 500 180 L 470 175 L 450 145 Z"/>
+          <!-- Africa -->
+          <path d="M 480 200 L 540 200 L 560 250 L 555 320 L 530 360 L 500 360 L 475 320 L 470 250 Z"/>
+          <!-- Asia -->
+          <path d="M 540 100 L 700 90 L 780 130 L 800 180 L 780 220 L 720 240 L 660 230 L 600 220 L 555 200 L 545 150 Z"/>
+          <!-- Australia -->
+          <path d="M 770 340 L 850 330 L 880 360 L 870 400 L 820 410 L 780 390 Z"/>
+        </g>
+
+        <!-- Office pins -->
+        <!-- New York: ~ 240, 195 -->
+        <g class="office-pin" data-city="New York" data-role="Headquarters · All strategies" transform="translate(240 195)">
+          <circle class="pulse" r="6"/>
+          <circle class="core" r="4"/>
+        </g>
+        <!-- Fort Worth: ~ 195, 220 -->
+        <g class="office-pin" data-city="Fort Worth" data-role="Operations · Texas" transform="translate(195 220)">
+          <circle class="pulse" r="5"/>
+          <circle class="core" r="3.5"/>
+        </g>
+        <!-- London: ~ 485, 145 -->
+        <g class="office-pin" data-city="London" data-role="European credit &amp; CLOs" transform="translate(485 145)">
+          <circle class="pulse" r="6"/>
+          <circle class="core" r="4"/>
+        </g>
+        <!-- Luxembourg: ~ 500, 155 (close to London, slight offset) -->
+        <g class="office-pin" data-city="Luxembourg" data-role="Funds &amp; investor solutions" transform="translate(503 165)">
+          <circle class="pulse" r="5"/>
+          <circle class="core" r="3.5"/>
+        </g>
+        <!-- Hong Kong: ~ 740, 220 -->
+        <g class="office-pin" data-city="Hong Kong" data-role="Asia credit &amp; special situations" transform="translate(740 220)">
+          <circle class="pulse" r="6"/>
+          <circle class="core" r="4"/>
+        </g>
+        <!-- Sydney: ~ 830, 380 -->
+        <g class="office-pin" data-city="Sydney" data-role="APAC private credit" transform="translate(830 380)">
+          <circle class="pulse" r="6"/>
+          <circle class="core" r="4"/>
+        </g>
+      </svg>
+
+      <div class="office-tooltip" id="officeTooltip">
+        <div class="city">New York</div>
+        <div class="role">Headquarters</div>
+      </div>
+    </div>
+
+    <div class="offices-list reveal-stagger">
+      <div class="office-row" data-city="New York">
         <div class="city">New York</div>
         <div class="country">United States · HQ</div>
-        <div class="addr">One Vanderbilt Avenue<br/>16th Floor<br/>New York, NY 10017</div>
-        <div class="role">Headquarters · All strategies</div>
+        <div class="role">All strategies · One Vanderbilt Avenue</div>
       </div>
-      <div class="office">
-        <div class="city">London</div>
-        <div class="country">United Kingdom</div>
-        <div class="addr">Mayfair<br/>European credit headquarters</div>
-        <div class="role">European credit & CLOs</div>
-      </div>
-      <div class="office">
+      <div class="office-row" data-city="Fort Worth">
         <div class="city">Fort Worth</div>
         <div class="country">United States</div>
-        <div class="addr">Texas operations &<br/>investor relations hub</div>
-        <div class="role">Operations & client service</div>
+        <div class="role">Operations &amp; client service</div>
       </div>
-      <div class="office">
-        <div class="city">Hong Kong</div>
-        <div class="country">Hong Kong SAR</div>
-        <div class="addr">Asia-Pacific credit<br/>and distressed</div>
-        <div class="role">Asia credit & special situations</div>
+      <div class="office-row" data-city="London">
+        <div class="city">London</div>
+        <div class="country">United Kingdom</div>
+        <div class="role">European credit &amp; CLOs</div>
       </div>
-      <div class="office">
-        <div class="city">Sydney</div>
-        <div class="country">Australia</div>
-        <div class="addr">Australian and<br/>New Zealand credit</div>
-        <div class="role">APAC private credit</div>
-      </div>
-      <div class="office">
+      <div class="office-row" data-city="Luxembourg">
         <div class="city">Luxembourg</div>
         <div class="country">Luxembourg</div>
-        <div class="addr">European fund<br/>structuring & distribution</div>
-        <div class="role">Funds & investor solutions</div>
+        <div class="role">Fund structuring &amp; distribution</div>
+      </div>
+      <div class="office-row" data-city="Hong Kong">
+        <div class="city">Hong Kong</div>
+        <div class="country">Hong Kong SAR</div>
+        <div class="role">Asia credit &amp; special situations</div>
+      </div>
+      <div class="office-row" data-city="Sydney">
+        <div class="city">Sydney</div>
+        <div class="country">Australia</div>
+        <div class="role">APAC private credit</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ============================================================
+     CTA
+     ============================================================ -->
 <section class="cta">
+  <div class="cta-mark" aria-hidden="true">
+    <svg viewBox="0 0 400 500" fill="none">
+      <path d="M200 30 Q 280 80 290 180 Q 360 200 350 300 Q 280 320 260 380 Q 230 460 200 480 Q 170 460 140 380 Q 120 320 50 300 Q 40 200 110 180 Q 120 80 200 30 Z"
+            stroke="#d4a843" stroke-width="0.6" />
+      <path d="M200 30 V 480" stroke="#d4a843" stroke-width="0.4" />
+    </svg>
+  </div>
   <div class="container">
     <span class="eyebrow reveal">Partner with us</span>
-    <h2 class="reveal" style="--reveal-delay: 0.1s; margin-top: 1.5rem;">Built for institutional investors. Open to discerning individuals.</h2>
+    <h2 class="reveal" style="--reveal-delay: 0.1s">Built for institutional investors. Open to discerning individuals.</h2>
     <p class="lead reveal" style="--reveal-delay: 0.2s">
       We work with pension plans, sovereign wealth funds, insurance companies, endowments, foundations, family offices and qualified individual investors seeking thoughtful exposure to global credit.
     </p>
@@ -391,14 +691,19 @@
 <!-- Footer -->
 <footer class="site-footer">
   <div class="container">
+
+    <div class="footer-watermark" aria-hidden="true">Oak Hill</div>
+
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">
-            Oak Hill Advisors
-            <small>A T. Rowe Price Company</small>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 42 42" fill="none">
+              <path d="M21 7 C 14 11, 11 17, 13 24 C 16 21, 19 19, 21 19 C 23 19, 26 21, 29 24 C 31 17, 28 11, 21 7 Z" fill="#d4a843"/>
+              <path d="M21 19 V 35" stroke="#d4a843" stroke-width="0.8" stroke-linecap="round"/>
+            </svg>
           </span>
+          <span class="brand-text">Oak Hill Advisors<small>A T. Rowe Price Company</small></span>
         </a>
         <p>A global credit-focused alternative asset manager investing on behalf of institutions and individuals worldwide.</p>
       </div>
@@ -429,17 +734,17 @@
         <h5>Resources</h5>
         <ul>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="insights.html?filter=outlook">Market outlook</a></li>
-          <li><a href="insights.html?filter=press">Press releases</a></li>
+          <li><a href="insights.html">Market outlook</a></li>
+          <li><a href="insights.html">Press releases</a></li>
           <li><a href="contact.html">Investor relations</a></li>
         </ul>
       </div>
 
       <div class="footer-col footer-newsletter">
-        <h5>Stay informed</h5>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted);">Quarterly outlooks delivered to your inbox.</p>
+        <h5>Quarterly outlook</h5>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">Our quarterly commentary, in your inbox.</p>
         <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
-          <input type="email" placeholder="Email address" required />
+          <input type="email" placeholder="you@firm.com" required />
           <button type="submit">
             Subscribe
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -449,7 +754,7 @@
     </div>
 
     <div class="footer-bottom">
-      <div>© 2026 Oak Hill Advisors, L.P. All rights reserved.</div>
+      <div>© 2026 Oak Hill Advisors, L.P.</div>
       <div class="legal">
         <a href="#">Legal</a>
         <a href="#">Privacy</a>
